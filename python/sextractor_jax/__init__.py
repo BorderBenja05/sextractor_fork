@@ -98,6 +98,13 @@ from .jax_filter import (
     make_mexhat_mask,
 )
 
+# In-memory SExtractor interface
+from .sextractor import (
+    SExtractor,
+    run as sex_run,
+    memory_backend,
+)
+
 __version__ = "0.1.0"
 __all__ = [
     # fft
@@ -120,4 +127,6 @@ __all__ = [
     # filter
     "convolve_image", "convolve_scanline", "apply_filter_batch",
     "make_gaussian_mask", "make_tophat_mask", "make_mexhat_mask",
+    # in-memory SExtractor interface
+    "SExtractor", "sex_run", "memory_backend",
 ]
